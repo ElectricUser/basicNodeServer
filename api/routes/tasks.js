@@ -1,12 +1,13 @@
 import express from 'express'
 import * as taskController from '../controllers/tasks.js'
-
+import authenticateToken from '../middleware/authenticateToken.js'
 
 export const router = express.Router()
+// middleware 
+router.use(authenticateToken)
 
 router.get("/", async (req, res) => {
     let tasks = await taskController.getTasks()
-    console.log(tasks)
     if (tasks.length != 0) {
         res.status(200).send({
             data: tasks

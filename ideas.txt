@@ -1,0 +1,8 @@
+1. Create a middleware function that verifies if the user has the token in it's headers and if it hasnt expired yet.
+(If it has expired) 
+> it should redirect the user to the login page, 
+(else) 
+> refresh the token for another hour
+
+2. Add a middleware function that verifies if the token was corrupted and adds that user's IP to a list that blocks
+ their access to resources for an amount of time

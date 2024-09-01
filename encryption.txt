@@ -1,0 +1,24 @@
+1. encriptação da password 
+
+genSalt(num_rounds, private_key)
+
+guardar o salt na bd?
+
+
+prefix - identifies as bcrypt
+work factor - slows the algorithm
+hash - hash function
+salt - string aleatória
+
+
+bcrypt steps:
+1. generate salt
+2. hash(password, salt)
+3. save hash in db
+
+Hashing + salt
+
+salt - random gen string
+hash (password + salt)
+
+protects against the rainbow table: passwords are not the same once you find out a password
